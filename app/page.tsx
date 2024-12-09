@@ -13,8 +13,8 @@ export default function Home() {
               <FaUserCircle size={50} color="gray" className="max-sm:hidden"/>
               <FaUserCircle size={30} color="gray" className="sm:hidden"/>
             <div className="ml-4 flex flex-col">
-              <div className="text-lg max-sm:text-base">John's Restaurant</div>
-              <div className="text-sm text-slate-600">john@example.com</div>
+            <div className="text-lg max-sm:text-base">John&#39;s Restaurant</div>
+            <div className="text-sm text-slate-600">john@example.com</div>
             </div>
           </div>
           <div className="flex flex-row items-center ml-auto mr-0 active:bg-slate-400 rounded-md p-2 cursor-pointer bg-[#f1f1f1]">
@@ -30,7 +30,7 @@ export default function Home() {
               <FaStore size={20} color="blue"/>
               <div className="ml-2 text-base font-bold">Store Information</div>
             </div>
-            <div className="my-2 text-gray-800 text-sm">Configure your store's basic information</div>
+            <div className="my-2 text-gray-800 text-sm">Configure your store&#39;s basic information</div>
             <div className="text-blue-800 flex flex-row items-center cursor-pointer">
               <div className="text-sm">Configure</div>
               <div className="ml-2">
