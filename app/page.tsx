@@ -1,101 +1,116 @@
-import Image from "next/image";
+import { FaStore, FaUserCircle, FaCalendarAlt, FaCode } from "react-icons/fa";
+import { IoIosSettings } from "react-icons/io";
+import { FaQq, FaArrowRightLong } from "react-icons/fa6";
+import { IoChatbubbles } from "react-icons/io5";
+import { PiTestTubeFill } from "react-icons/pi";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-[100vh] bg-[#f4f6fa] min-w-full flex flex-col">
+      <div className="flex-1 max-w-[900px] w-full mx-auto px-4 py-8 h-auto">
+        <div className="p-4 flex flex-row items-center rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,0.075)] bg-white">
+          <div className="flex flex-row items-center">
+              <FaUserCircle size={50} color="gray" className="max-sm:hidden"/>
+              <FaUserCircle size={30} color="gray" className="sm:hidden"/>
+            <div className="ml-4 flex flex-col">
+              <div className="text-lg max-sm:text-base">John's Restaurant</div>
+              <div className="text-sm text-slate-600">john@example.com</div>
+            </div>
+          </div>
+          <div className="flex flex-row items-center ml-auto mr-0 active:bg-slate-400 rounded-md p-2 cursor-pointer bg-[#f1f1f1]">
+            <IoIosSettings size={25}/>
+            <div className="ml-2 text-sm max-[400px]:hidden">Account Setting</div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="mt-8 max-sm:px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 flex-row">
+
+          <div className="p-4 min-h-[160px] h-full rounded-md bg-white flex justify-center flex-col shadow-[0_.125rem_.25rem_rgba(0,0,0,0.075)]">
+            <div className="flex flex-row items-center">
+              <FaStore size={20} color="blue"/>
+              <div className="ml-2 text-base font-bold">Store Information</div>
+            </div>
+            <div className="my-2 text-gray-800 text-sm">Configure your store's basic information</div>
+            <div className="text-blue-800 flex flex-row items-center cursor-pointer">
+              <div className="text-sm">Configure</div>
+              <div className="ml-2">
+                <FaArrowRightLong color="blue"/>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 min-h-[160px] h-full rounded-md bg-white flex justify-center flex-col shadow-[0_.125rem_.25rem_rgba(0,0,0,0.075)]">
+            <div className="flex flex-row items-center">
+              <FaQq size={20} color="purple"/>
+              <div className="ml-2 text-base font-bold">FAQ Training</div>
+            </div>
+            <div className="my-2 text-gray-800 text-sm">Train AI with your FAQs for automated responses</div>
+            <div className="text-purple-800 flex flex-row items-center cursor-pointer">
+              <div className="text-sm">Configure</div>
+              <div className="ml-2">
+                <FaArrowRightLong color="purple"/>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 min-h-[160px] h-full rounded-md bg-white flex justify-center flex-col shadow-[0_.125rem_.25rem_rgba(0,0,0,0.075)]">
+            <div className="flex flex-row items-center">
+              <FaCalendarAlt size={20} color="green"/>
+              <div className="ml-2 text-base font-bold">Calendar Sync</div>
+            </div>
+            <div className="my-2 text-gray-800 text-sm">Sync bookings with Google Calendar</div>
+            <div className="text-green-800 flex flex-row items-center cursor-pointer">
+              <div className="text-sm">Connect</div>
+              <div className="ml-2">
+                <FaArrowRightLong color="green"/>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 min-h-[160px] h-full rounded-md bg-white flex justify-center flex-col shadow-[0_.125rem_.25rem_rgba(0,0,0,0.075)]">
+            <div className="flex flex-row items-center">
+              <IoChatbubbles size={20} color="orange"/>
+              <div className="ml-2 text-base font-bold">Chat History</div>
+            </div>
+            <div className="my-2 text-gray-800 text-sm">View past chat conversations</div>
+            <div className="text-amber-500 flex flex-row items-center cursor-pointer">
+              <div className="text-sm">View</div>
+              <div className="ml-2">
+                <FaArrowRightLong color="orange"/>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 min-h-[160px] h-full rounded-md bg-white flex justify-center flex-col shadow-[0_.125rem_.25rem_rgba(0,0,0,0.075)]">
+            <div className="flex flex-row items-center">
+              <FaCode size={20} color="indigo"/>
+              <div className="ml-2 text-base font-bold">Generate Snippet</div>
+            </div>
+            <div className="my-2 text-gray-800 text-sm">Generate chat widget code for your website</div>
+            <div className="text-indigo-800 flex flex-row items-center cursor-pointer">
+              <div className="text-sm">Generate</div>
+              <div className="ml-2">
+                <FaArrowRightLong color="indigo"/>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 min-h-[160px] h-full rounded-md bg-white flex justify-center flex-col shadow-[0_.125rem_.25rem_rgba(0,0,0,0.075)]">
+            <div className="flex flex-row items-center">
+              <PiTestTubeFill size={20} color="red"/>
+              <div className="ml-2 text-base font-bold">AI Test</div>
+            </div>
+            <div className="my-2 text-gray-800 text-sm">Test your trained AI responses</div>
+            <div className="text-red-600 flex flex-row items-center cursor-pointer">
+              <div className="text-sm">Test</div>
+              <div className="ml-2">
+                <FaArrowRightLong color="red"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }
